@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my website</title>
+    <link href="css/bootstrap.min.css"  rel="stylesheet"/>
+    <link href="css/bootstrap-theme.min.css"  rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.min.js"></script>
+
+    <script src="scripts/angular/app.js"></script>
+    <script src="scripts/angular/controllers/home.controller.js"></script>
+    <script src="scripts/angular/controllers/contact.controller.js"></script>
+
+    <script>
+        function hellojudson(){
+
+            console.log("how are you doing judson");
+        }
+
+        //declare a function
+        function doSomething(){
+
+            alert('Hello Judson');
+        }
+
+        function doSomething2() {
+
+
+            var mymessage = "Hello Sushmi!"; //string.
+            var number = 123; //numeric.
+            console.log(mymessage + " " + number) //concatenation.
+
+        }
+
+        //anonymous function instantiates the inner function call.
+        (function() {
+
+          // doSomething();
+            //doSomething2();
+            hellojudson();
+
+        })();
+
+    </script>
+
+</head>
+<body ng-app="myApp" >
+<header>
+    <div class="logo">welcome to my website</div>
+    <div class="nav">
+        <a href="#/home">Home</a>
+        <a href="#/about">About</a>
+        <a href="#/contact">Contact</a>
+        <a href="#/customers">Customers</a>
+    </div>
+
+
+</header>
+<br/>
+<section class="container-fluid">
+    <!--this is where our pages get loaded into-->
+    <div ng-view autoscroll="true" ontouchstart=""></div>
+
+</section>
+<footer>copyright 2015 sushmi designs</footer>
+</body>
+</html>

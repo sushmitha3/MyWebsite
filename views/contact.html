@@ -1,0 +1,39 @@
+<h1 class="contact">contacts</h1>
+<hr/>
+<p class="contact">My content here..</p>
+
+<p>please enter the information below:</p>
+<div>
+    <form ng-submit="submit()" ng-reset="reset()">
+
+        customer is: {{customer}}
+
+        Firstname:
+        <p><input type="text" name="firstname" ng-model="customer.firstName"/></p>
+
+        lastname:
+        <p><input type="text" name="lastname" ng-model="customer.lastName"></p>
+
+        Email:
+        <p><input type="text" name="email" ng-model="customer.email"></p>
+
+        city:
+        <p><input type="text" name="city" ng-model="customer.city"></p>
+
+        address:
+        <p><input type="text" name="address" ng-model="customer.address"></p>
+
+        zipcode:
+        <p><input type="number" name="zipcode" ng-model="customer.zipcode"></p>
+
+        <input type="submit" value="submit">
+
+        <input type="reset" value="reset">
+
+    </form>
+
+</div>
+
+
+
+
